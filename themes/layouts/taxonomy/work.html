@@ -1,0 +1,28 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-work-list{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<div class="intro intro-big">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>{{ .Title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="work-gallery grid pb-0 pb-md-10">
+  {{ range .Pages }}
+  <div class="work-gallery-item grid-item {{ range .Params.works }}{{ . | urlize }} {{ end }}">
+    {{ .Render "summary" }}
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}
+
+{{ define "debug" }}
+{{ partial "debug" (dict "context" . "template" "layouts/taxonomy/work.html") }}
+{{ end }}

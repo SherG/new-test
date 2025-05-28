@@ -1,0 +1,183 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Hugo Advance"
+theme = "hugo-advance"
+paginate = 3
+enableGitInfo = false
+
+[params]
+
+    debugbar = true
+    google_analytics_id = ""
+
+    [params.theme]
+        # Theme colors
+        primary_color = "#1c3ed3"
+        secondary_color = "#6d1cd3"
+        grey_color = "#f4f5fb"
+
+        # Import and use Google fonts
+        google_fonts_snippet = '<link href="https://fonts.googleapis.com/css?family=Palanquin:300,500,700|Lato:400,700" rel="stylesheet">'
+        font_family_heading = "Palanquin"
+        font_family_base = "Lato" 
+    
+    [params.logo]
+        logo = "images/logo.svg" # Desktop logo
+        logo_mobile = "images/logo-mobile.svg" # Mobile logo, typically the smaller square version of your logo (logomark)
+        logo_invert = "images/logo-invert.svg" # Desktop logo in white, for use when the header is transparent
+        logo_invert_mobile = "images/logo-invert-mobile.svg" # Mobile logo in white
+
+    [params.header]
+        header_fixed = true # if true the header will be fixed and animate on scroll
+
+    [params.homepage_meta_tags]
+        meta_description = "Advance is a premium, multi-purpose Hugo theme. It has 5 content-types for archetypical SMB and marketing websites. A modern semi-flat visual design with customisable hero images and full-width sections."
+        meta_og_title = "Hugo Advance Theme"
+        meta_og_type = "website"
+        meta_og_url = "https://hugo-advance-pro.netlify.com"
+        meta_og_image = "https://hugo-advance-pro.netlify.com/images/tn.png"
+        meta_og_description = "Advance is a premium, multi-purpose Hugo theme. It has 5 content-types for archetypical SMB and marketing websites. A modern semi-flat visual design with customisable hero images and full-width sections."
+        meta_twitter_card = "summary"
+        meta_twitter_site = "@zerostaticio"
+        meta_twitter_creator = "@zerostaticio"
+    
+    [params.hero]
+        hero_background_gradient_one = "#1c3ed3"
+        hero_background_gradient_two = "#6d1cd3"
+
+    [params.footer]
+        show_menu_footer_primary = true
+        show_menu_footer_secondary = true
+        show_services_links = true
+        show_work_links = true
+
+    [params.homepage]
+        # Services section on the homepage
+        show_services_section = true
+        services_section_heading = "Our Services"
+        services_count = 3 # number of service items to display 
+        show_view_all_services_button = false
+        services_button_text = "View All Services"
+        services_button_link = "services" # the URL of the page the button should link too
+        
+        # Work section on the homepage
+        show_work_section = true
+        work_section_heading = "Our Work"
+        work_count = 2 # number of work items to display
+        show_view_all_work_button = true
+        work_button_text = "View Our Work"
+        work_button_link = "work" # the URL of the page the button should link too
+
+        # Homepage partners logos - ie the logos for netflix, slack etc, you can edit these logos in `data/partners.json`
+        show_partners_section = true
+
+        # Homepage splash section - ie the "We Help Business Grow" section
+        show_splash_section_one = true
+        splash_one_image = "images/headway-jfR5wu2hMI0-unsplash.jpg"
+        splash_one_heading = "We Help Business Grow"
+        splash_one_paragraph = "Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. Numquam dolores mel eu, mea docendi omittantur et, mea ea duis erat. Elit melius cu ius. Per ex novum tantas putant, ei his nullam aliquam apeirian."
+        splash_one_link_url = "team"
+        splash_one_link_text = "Meet our team"
+
+    [params.services]
+        # Services Page
+        show_features = true
+        show_splash_one_section = true # shows the hero image at the bottom of the services page
+        splash_one_background_image = "images/kaleidico-754543-unsplash.jpg"
+        splash_one_heading = "We build great software"
+        splash_one_paragraph = "Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. Numquam dolores mel eu, mea docendi omittantur et, mea ea duis erat. Elit melius cu ius. Per ex novum tantas putant, ei his nullam aliquam apeirian. Aeterno quaestio constituto sea an, no eum intellegat assueverit."
+    
+    [params.work] 
+        # Work Page
+        order_work_grid = 'weight' # shuffle, lastmod, weight
+        show_filters = true # show filters
+
+    [params.contact_cta]
+        heading = "Ready to get started?"
+        subheading = "Get in touch and get a quote."
+        button_url = "contact"
+        button_text = "Contact us"
+
+# Main Menu
+[[menu.main]]
+	name = "Services"
+	url = "/services/"
+    weight = 1
+
+[[menu.main]]
+	name = "Work"
+	url = "/work/"
+	weight = 2
+
+[[menu.main]]
+    name = "Team"
+    url = "/team/"
+    weight = 3
+
+[[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 4
+
+[[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+# Footer Menu Primary
+[[menu.footer_primary]]
+	name = "Home"
+	url = "/"
+    weight = 1
+
+[[menu.footer_primary]]
+	name = "Services"
+	url = "/services/"
+    weight = 2
+
+[[menu.footer_primary]]
+	name = "Work"
+	url = "/work/"
+	weight = 3
+
+[[menu.footer_primary]]
+    name = "Team"
+    url = "/team/"
+    weight = 4
+
+[[menu.footer_primary]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 5
+
+[[menu.footer_primary]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 6
+
+[[menu.footer_primary]]
+    name = "About"
+    url = "/about/"
+    weight = 7
+
+# Footer Menu Secondary
+[[menu.footer_secondary]]
+    name = "Privacy Policy"
+    url = "/privacy/"
+    weight = 1
+
+[[menu.footer_secondary]]
+    name = "404"
+    url = "/404/"
+    weight = 2
+
+
+[permalinks]
+    post = "/:year/:month/:title/"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    work =  "works"
+    author = "authors"
+  

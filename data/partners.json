@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Netflix",
+    "image": "/partners/netflix.svg",
+    "url": "https://www.zerostatic.io"
+  },
+  {
+    "title": "Android",
+    "image": "/partners/android.svg",
+    "url": "https://www.zerostatic.io"
+  },
+  {
+    "title": "Slack",
+    "image": "/partners/slack.svg",
+    "url": "https://www.zerostatic.io"
+  },
+  {
+    "title": "Algolia",
+    "image": "/partners/algolia.svg",
+    "url": "https://www.zerostatic.io"
+  },
+  {
+    "title": "Github",
+    "image": "/partners/github.svg",
+    "url": "https://www.zerostatic.io"
+  }
+]
